@@ -1,0 +1,368 @@
+.left-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  height: auto;
+  width: 60%;
+
+  .share-icon-btn {
+    display: flex;
+    justify-content: end;
+    width: max-content;
+    margin-left: 25.5rem;
+    cursor: pointer;
+
+    @media (max-width: 1440px) {
+      margin-left: 22rem;
+    }
+  }
+  .tweets-heading {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-family: "Work-Sans";
+
+    @font-face {
+      font-family: "Work-Sans";
+      src: url("../../../Fonts/work-sans.medium.ttf");
+      font-style: normal;
+    }
+  }
+
+  .positive {
+    @media (max-width: 998px) {
+      font-weight: 500;
+      font-size: 0.625rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  .search-container-wrapper {
+    width: auto;
+    padding: 0.5rem;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .search-container {
+    width: auto;
+    position: relative;
+    align-items: center;
+
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+    // position: relative;
+
+    .seacrh-bar {
+      width: 100%;
+      border-radius: 0.25rem;
+      border: 1px solid #eeeeee;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      outline: none;
+    }
+    input,
+    input::placeholder {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.25rem;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    width: auto;
+    margin-right: 1rem;
+    cursor: pointer;
+    // top: 1rem;
+    // left: 46.5rem;
+    top: 29%;
+    left: 98%;
+
+    @media (max-width: 1280px) {
+      left: 37.5rem;
+    }
+    @media (max-width: 1440px) {
+      left: 42.8rem;
+    }
+
+    .search-icon-image {
+      @media (max-width: 998px) {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+
+    .close-icon-image {
+      width: 1.25rem;
+      height: 1.25rem;
+
+      @media (max-width: 998px) {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+
+    @media (max-width: 998px) {
+      left: 44.5em;
+      top: 1.3rem;
+    }
+  }
+
+  .realTime-radioBtn {
+    display: flex;
+  }
+  // .radio-button {
+  //   align-items: center;
+  //   display: flex;
+  //   border-bottom: 1px solid #f5f5f5;
+  //   padding: 1rem;
+  //   //   padding-top: 0%;
+
+  //   .container {
+  //     display: block;
+  //     position: relative;
+  //     align-items: center;
+
+  //     .positive {
+  //       padding-left: 1.563rem;
+  //       margin: 0%;
+  //       padding-top: 0.1rem;
+  //       font-weight: 500;
+  //     }
+
+  //     cursor: pointer;
+  //     font-size: 0.875rem;
+  //     -webkit-user-select: none;
+  //     -moz-user-select: none;
+  //     -ms-user-select: none;
+  //     user-select: none;
+  //   }
+
+  //   /* Hide the browser's default radio button */
+  //   .container input {
+  //     position: absolute;
+  //     opacity: 0;
+  //     cursor: pointer;
+  //   }
+
+  //   /* Create a custom radio button */
+  //   .checkmark {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     height: 1rem;
+  //     width: 1rem;
+  //     font-weight: 500;
+  //     line-height: 1.25rem;
+  //     background-color: #ffffff;
+  //     border-radius: 50%;
+  //     border: 1px solid #f05728;
+  //   }
+
+  //   /* On mouse-over, add a grey background color */
+  //   .container:hover input ~ .checkmark {
+  //     background-color: #ffffff;
+  //   }
+
+  //   /* When the radio button is checked, add a blue background */
+  //   .container input:checked ~ .checkmark {
+  //     background-color: #ffffff;
+  //   }
+
+  //   /* Create the indicator (the dot/circle - hidden when not checked) */
+  //   .checkmark:after {
+  //     content: "";
+  //     position: absolute;
+  //     display: none;
+  //   }
+
+  //   /* Show the indicator (dot/circle) when checked */
+  //   .container input:checked ~ .checkmark:after {
+  //     display: block;
+  //   }
+
+  //   /* Style the indicator (dot/circle) */
+  //   .container .checkmark:after {
+  //     top: 5px;
+  //     left: 5px;
+  //     width: 6px;
+  //     height: 6px;
+  //     border-radius: 50%;
+  //     background: #f05728;
+  //   }
+  // }
+  .second-container {
+    margin-left: 1rem;
+  }
+  .main-heading {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0%;
+  }
+
+  .heading {
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: max-content;
+    padding: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: #9e9e9e;
+    background-color: white;
+    margin: 0%;
+    border-radius: 8px 8px 0px 0px;
+    cursor: pointer;
+
+    @media (max-width: 998px) {
+      font-weight: 500;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  .colored-heading {
+    border: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: #14144b;
+    width: max-content;
+    padding: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: white;
+    margin: 0%;
+    border-radius: 8px 8px 0px 0px;
+    cursor: pointer;
+
+    @media (max-width: 998px) {
+      font-weight: 500;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  .second-heading {
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    line-height: 1.5rem;
+    background-color: white;
+    width: max-content;
+    padding: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: #9e9e9e;
+    margin: 0%;
+    cursor: pointer;
+    border-radius: 8px 8px 0px 0px;
+
+    @media (max-width: 998px) {
+      font-weight: 500;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  .second-colored-heading {
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+    line-height: 1.5rem;
+    background-color: #14144b;
+    width: max-content;
+    padding: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: white;
+    margin: 0%;
+    cursor: pointer;
+    border-radius: 8px 8px 0px 0px;
+
+    @media (max-width: 998px) {
+      font-weight: 500;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  .left-content-wrapper {
+    background-color: white;
+    height: 27rem;
+    width: auto;
+    padding: 0.5rem;
+    overflow: auto;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+
+    .left-content-wrappe::-webkit-scrollbar {
+      width: 0.625rem;
+    }
+
+    .left-content {
+      border-bottom: 1px solid #eeeeee;
+      height: auto;
+      // padding: 1rem;
+      padding-top: 1rem;
+      overflow: hidden;
+
+      .left-content-heading {
+        margin: 0%;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        color: #000000;
+        width: 95%;
+
+        .heading-colored {
+          color: #0033cc;
+        }
+      }
+      .hashtags {
+        margin: 0%;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        color: #000000;
+        width: 70%;
+
+        .hashtags-colored {
+          color: #0033cc;
+          margin-left: 0.3rem;
+        }
+      }
+      .link {
+        margin: 0%;
+        padding-top: 0.5rem;
+        color: #1da1f2;
+        line-height: 2.5rem;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .username {
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: #000000;
+        cursor: pointer;
+      }
+    }
+
+    .twitter-details {
+      display: flex;
+      align-items: center;
+
+      .twitter-logo {
+        margin-right: 0.5rem;
+        cursor: pointer;
+
+        @media (max-width: 998px) {
+          width: 0.938rem;
+          height: 0.938rem;
+        }
+      }
+    }
+  }
+}

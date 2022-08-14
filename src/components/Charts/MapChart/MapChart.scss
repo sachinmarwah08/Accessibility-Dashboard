@@ -1,0 +1,97 @@
+.map-wrapper {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.625rem;
+  margin-top: 1.5rem;
+
+  .radio-map-btn {
+    display: flex;
+    width: 100%;
+  }
+
+  .content-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.8rem;
+    padding-bottom: 0.3rem;
+
+    .map-sort {
+      margin-top: 0.8rem;
+    }
+
+    .heading-map {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  .heading {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #14144b;
+
+    @media (max-width: 998px) {
+      font-weight: 700;
+      font-size: 0.75rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  .bar-map-wrapper {
+    background-color: white;
+    width: 100%;
+    height: 29.7rem;
+
+    // margin-bottom: 60rem;
+    border-radius: 0.5rem;
+    @media (max-width: 998px) {
+      height: 28.8rem;
+    }
+  }
+
+  .chart-map {
+    height: 28.8rem;
+    border-radius: 1.25rem;
+    margin: 1rem;
+  }
+
+  .side-logos {
+    display: flex;
+    width: max-content;
+    align-items: center;
+
+    .WorldMap {
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      @media (max-width: 998px) {
+        width: 1.563rem;
+        height: 1.563rem;
+      }
+    }
+
+    .table {
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      @media (max-width: 998px) {
+        width: 1.563rem;
+        height: 1.563rem;
+      }
+    }
+
+    .bigArrow {
+      width: 2.438rem;
+      height: 2.438rem;
+      cursor: pointer;
+      @media (max-width: 998px) {
+        width: 1.563rem;
+        height: 1.563rem;
+      }
+    }
+  }
+}

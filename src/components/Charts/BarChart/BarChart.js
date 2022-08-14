@@ -1,0 +1,83 @@
+import React, { useState } from "react";
+import "./BarChart.scss";
+import Highcharts from "highcharts";
+import Sort from "../../SortFilter/Sort";
+import HighchartsReact from "highcharts-react-official";
+import {
+  faAngleDown,
+  faArrowDownShortWide,
+  faArrowUpWideShort,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import data from "./data";
+import shareIcon from "../../../Images/share.svg";
+import RadioButton from "../../RadioButton/RadioButton";
+
+const BarChartComponent = ({ isRadioChecked, handleRadioChange }) => {
+  const [isActive, setIsActive] = useState(false);
+  const barData = ["Influencer", "Hashtag"];
+  const [bardata, setBardata] = useState("Filter");
+
+  return (
+    <>
+      <div className="wrapper">
+        <div className="content">
+          <div className="bar-heading-wrapper">
+            <div className="heading-left">
+              <h1 className="heading">
+                Countries Rankings by Accessibility Interest
+              </h1>
+            </div>
+            <div className="btn-share">
+              {/* <button
+                onClick={() => setIsActive(!isActive)}
+                className="heading-button"
+              >
+                <FontAwesomeIcon icon={faAngleDown} />
+                Top 10
+                {isActive && (
+                  <div className="dropdown-bar-filter">
+                    <div className="dropdown-item">
+                      High to Low <FontAwesomeIcon icon={faArrowUpWideShort} />
+                    </div>
+                    <div className="dropdown-item">
+                      Low to High
+                      <FontAwesomeIcon icon={faArrowDownShortWide} />
+                    </div>
+                  </div>
+                )}
+              </button> */}
+              <button className="share-btn">
+                <img alt="share-icon-bar" src={shareIcon} />
+              </button>
+            </div>
+          </div>
+
+          <div className="radio-bar-btn">
+            <RadioButton
+              name="Interest"
+              checked={isRadioChecked}
+              value={1}
+              onchange={handleRadioChange}
+            />
+            <RadioButton
+              name="Sentiment"
+              checked={isRadioChecked}
+              value={2}
+              onchange={handleRadioChange}
+            />
+          </div>
+
+          <Sort setData={setBardata} data={bardata} optiondata={barData} />
+        </div>
+        <div className="bar-chart-wrapper">
+          <div className="chart-bar">
+            <HighchartsReact highcharts={Highcharts} options={data} />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BarChartComponent;
