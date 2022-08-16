@@ -13,10 +13,16 @@ import data from "./data";
 import shareIcon from "../../../Images/share.svg";
 import RadioButton from "../../RadioButton/RadioButton";
 
-const BarChartComponent = ({ isRadioChecked, handleRadioChange }) => {
+const BarChartComponent = () => {
   const [isActive, setIsActive] = useState(false);
   const barData = ["Influencer", "Hashtag"];
   const [bardata, setBardata] = useState("Filter");
+  const [isRadioChecked, setIsRadioChecked] = useState(0);
+
+  const handleRadioChange = (value) => {
+    setIsRadioChecked(value);
+    console.log(value);
+  };
 
   return (
     <>

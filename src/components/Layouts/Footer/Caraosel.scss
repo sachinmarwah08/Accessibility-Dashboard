@@ -1,0 +1,39 @@
+.caraosel-container {
+  width: 80%;
+  height: 40vh;
+
+  margin: auto;
+
+  .content-outer {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: space-around;
+    .content {
+      width: max-content;
+    }
+  }
+
+  .dot-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    align-items: center;
+    gap: 25px;
+
+    .dot-colored {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #3e75f8;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(231, 232, 242, 0.23);
+    }
+  }
+}

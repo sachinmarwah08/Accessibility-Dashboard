@@ -7,9 +7,15 @@ import GoogleMap from "./googleMap";
 import Sort from "../../SortFilter/Sort";
 import RadioButton from "../../RadioButton/RadioButton";
 
-const MapChartComponent = ({ isRadioChecked, handleRadioChange }) => {
+const MapChartComponent = () => {
   const mapData = ["influencer", "hashtags"];
   const [mapdata, setMapData] = useState("Filter");
+  const [isRadioChecked, setIsRadioChecked] = useState(0);
+
+  const handleRadioChange = (value) => {
+    setIsRadioChecked(value);
+    console.log(value);
+  };
 
   return (
     <div className="map-wrapper">

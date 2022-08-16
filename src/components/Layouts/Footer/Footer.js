@@ -1,69 +1,52 @@
 import React from "react";
 import "./Footer.scss";
-import logo from "../../../Images/logo.svg";
-import appleLogo from "../../../Images/appleLogo.png";
-import googlePlayLogo from "../../../Images/googlePlayLogo.png";
+import logo from "../../../Images/footerLogo.svg";
+import Caraosel from "./Caraosel";
 
 const Footer = () => {
   return (
-    <footer className="footer-wrapper">
-      <div className="footer-inside-wrapper">
-        <div className="footer-left-container">
-          <div className="footer-column-one">
-            <div className="footer-li">
-              <img alt="logo" src={logo}></img>
-              <p className="title-logo">
-                Wholistic Wellbeing for a better life
-              </p>
-            </div>
-          </div>
-          <div className="footer-column-one">
-            <div className="footer-li">
-              <h1 className="heading">About Us</h1>
-              <p className="title">Our Story</p>
-              <p className="title">Careers</p>
-            </div>
-          </div>
-          <div className="footer-column-one">
-            <div className="footer-li">
-              <h1 className="heading">Impact</h1>
-              <p className="title">Sustain</p>
-              <p className="title">Sports</p>
-            </div>
-          </div>
-          <div className="footer-column-one">
-            <div className="footer-li">
-              <h1 className="heading">About Us</h1>
-              <p className="title">FAQ</p>
-              <p className="title">Contact Us</p>
-            </div>
-          </div>
+    <div className="footer-wrapper">
+      <div className="footer-container">
+        <div className="footer-logo">
+          <img className="logo" src={logo} />
         </div>
-        <div className="footer-right-container">
-          <div className="footer-column-one">
-            <div className="footer-li">
-              <h1 className="heading">Get the free round glass app</h1>
-              <p className="title-right">
-                Let the power of meditation & minfulness help you achieve a
-                healthier, happer you
+        <div className="content-footer">
+          <div className="left-footer-content">
+            <h1 className="heading">about us</h1>
+            <p className="content">
+              citiesabc is a digital transformation platform to empower, guide
+              and index cities. citiesabc was created a team of global industry
+              leaders, academics and experts that is creating new solutions,
+              lists, rankings and connections for the world top cities and
+              populations. citiesabc offers the best of innovation in 4ir,
+              digital transformation, blockchain, ai, smart cities technologies
+              and big data.
+            </p>
+          </div>
+          <div className="right-footer-content">
+            <p className="heading">stay in the picture, join our newsletter</p>
+            <div className="email-wrapper">
+              <input className="email" type="text" placeholder="email" />
+              <button className="subscribe">Subscribe</button>
+            </div>
+            <div className="contact">
+              <p className="heading">
+                Contact us: <span className="info">info@citiesabc.com</span>
               </p>
-              <div className="logos-apple">
-                <img
-                  alt="appleLogo"
-                  className="appleLogo"
-                  src={appleLogo}
-                ></img>
-                <img
-                  alt="googlePlayLogo"
-                  className="googleLogo"
-                  src={googlePlayLogo}
-                ></img>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+      <div className="second-footer-container">
+        <div className="second-footer-content">
+          <h1 className="heading">in partnership with</h1>
+          <div className="carousel">
+            <Caraosel />
+          </div>
+        </div>
+      </div>
+      <div className="copyright"></div>
+    </div>
   );
 };
 
