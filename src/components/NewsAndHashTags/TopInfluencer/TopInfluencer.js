@@ -5,6 +5,7 @@ import { trendingHashtags } from "./data";
 import "./TrendingHashtags.scss";
 import shareIcon from "../../../Images/sharetwo.svg";
 import RadioButton from "../../RadioButton/RadioButton";
+import TopBottomButton from "../../TopBottomButton/TopBottomButton";
 
 const TopInfluencer = () => {
   const trendingData = ["Country", "Influencer", "Hashtag"];
@@ -46,12 +47,7 @@ const TopInfluencer = () => {
           value={3}
           onchange={handleRadioChange}
         />
-        <RadioButton
-          name="Media House"
-          checked={isRadioChecked}
-          value={4}
-          onchange={handleRadioChange}
-        />
+        <TopBottomButton />
       </div>
 
       <div className="trending-sort">

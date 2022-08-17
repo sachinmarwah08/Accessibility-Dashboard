@@ -3,7 +3,11 @@ import "./LineChart.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 import downloadIcon from "../../../Images/download.svg";
 import shareIcon from "../../../Images/share.svg";
-import { faPlus, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlus,
+  faArrowLeft,
+  faAngleDown,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../../Button/Button";
 import Modal from "../../Modal/Modal";
@@ -13,7 +17,7 @@ import Highcharts from "highcharts";
 import { LineChartBarData } from "./data";
 import HighchartsReact from "highcharts-react-official";
 import xCircle from "../../../Images/x-circle.svg";
-import threeDots from "../../../Images/threeDots.svg";
+import threeDots from "../../../Images/3dots.svg";
 
 const LineChartData = () => {
   const [selected, setSelected] = useState("Past 1 months");
@@ -26,7 +30,9 @@ const LineChartData = () => {
   const [addCountry, setaddCountry] = useState(false);
   const [contryNameState, setContryNameState] = useState("");
   const [isValue, setIsValue] = useState(false);
-  const [active, setActive] = useState(false);
+  const [compareCountryActive, setCompareCountryActive] = useState(false);
+  const [compareTimeActive, setCompareTimeActive] = useState(false);
+  const [chooseTime, setChooseTime] = useState(false);
 
   const navigateHome = () => {
     navigate("/");
@@ -97,21 +103,25 @@ const LineChartData = () => {
             </div>
             <div className="right-button">
               <button
-                onClick={() => setActive(!active)}
+                onClick={() => setCompareCountryActive(!compareCountryActive)}
                 className="right-ouline-button"
               >
                 <FontAwesomeIcon icon={faPlus} />
                 Compare country
               </button>
-              <button className="right-ouline-buttonTwo">
+              <button
+                onClick={() => setCompareTimeActive(!compareTimeActive)}
+                className="right-ouline-buttonTwo"
+              >
                 <FontAwesomeIcon icon={faPlus} />
                 Compare time
               </button>
             </div>
           </div>
-          {!active ? <div className="border"></div> : null}
+          {/* {!compareCountryActive ? <div className="border"></div> : null} */}
+          {/* {!compareTimeActive ? <div className="border"></div> : null} */}
 
-          {active && (
+          {compareCountryActive && (
             <div className="Add-country">
               <div className="country">
                 <img alt="image" src={threeDots} />
@@ -157,6 +167,42 @@ const LineChartData = () => {
                   </p>
                 </div>
               )}
+            </div>
+          )}
+          {compareTimeActive && (
+            <div className="Add-country">
+              <div className="country">
+                <img alt="image" src={threeDots} />
+                <p className="title">Time</p>
+              </div>
+              <button
+                onClick={() => setChooseTime(!chooseTime)}
+                className="compare-time"
+              >
+                <>
+                  <span className="faplus">
+                    <FontAwesomeIcon icon={faAngleDown} />
+                  </span>
+                  <p className="title">Choose Time</p>
+                  {chooseTime && (
+                    <div className="dropdown-content">
+                      <div className="drop-item">July, 2022</div>
+                    </div>
+                  )}
+                </>
+              </button>
+              <div className="country-added">
+                <span className="circle-line-added-country"></span>
+                <p className="title-line-added-country">
+                  {contryNameState}
+                  <button
+                    className="close-addCountry-btn"
+                    onClick={closeAddCountry}
+                  >
+                    <img alt="xCircle" src={xCircle} />
+                  </button>
+                </p>
+              </div>
             </div>
           )}
         </div>

@@ -43,8 +43,9 @@ const Chart = ({ show }) => {
             separator="         "
             labelStyle={{
               fontWeight: "700",
+              width: "8rem",
               color: "#14144B",
-              fontSize: "1.25rem",
+              fontSize: "15px",
               borderColor: "#757575",
               lineHeight: "1.25rem",
               lineHeight: "1.75rem",
@@ -83,7 +84,7 @@ const Chart = ({ show }) => {
               type="monotone"
               dataKey="fees"
               // strokeDasharray="0 3 8 8"
-              stroke="#2A00FF"
+              stroke="#DB4537"
               strokeWidth={3}
               dot={false}
               // activeDot={{ r: 8 }}

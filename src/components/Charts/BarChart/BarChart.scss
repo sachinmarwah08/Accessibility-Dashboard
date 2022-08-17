@@ -11,10 +11,16 @@
   @media (max-width: 998px) {
     height: 41rem;
   }
+
+  .filter-container {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
   .radio-bar-btn {
     display: flex;
     width: 100%;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.2rem;
   }
 
   .content {
@@ -27,13 +33,14 @@
   .bar-heading-wrapper {
     display: flex;
     width: 100%;
-
+    margin-bottom: -0.8rem;
     justify-content: space-between;
     align-items: center;
 
     .heading {
       font-weight: 600;
       font-size: 1.25rem;
+
       width: 100%;
       line-height: 1.75rem;
       color: #14144b;

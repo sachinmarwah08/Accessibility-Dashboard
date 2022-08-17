@@ -1,7 +1,7 @@
 .radio-button {
   align-items: center;
   display: flex;
-  padding: 1rem;
+  padding: 0.8rem;
   //   padding-top: 0%;
 
   .container {
@@ -12,8 +12,10 @@
     .positive {
       padding-left: 1.563rem;
       margin: 0%;
-      padding-top: 0.1rem;
-      font-weight: 500;
+      font-size: 16px;
+
+      font-weight: 400;
+      color: rgba(20, 20, 75, 0.8);
     }
 
     cursor: pointer;

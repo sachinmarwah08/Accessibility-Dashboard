@@ -23,22 +23,30 @@ const Header = () => {
         </div>
         <div className="links">
           <div className="links-data">
-            <div className="icon-button">About</div>
-            <div className="icon-button">Cities</div>
-            <div className="icon-button">
+            <a href="" className="icon-button">
+              About
+            </a>
+            <a href="" className="icon-button">
+              Cities
+            </a>
+            <a href="" className="icon-button">
               Market Place
               <div className="icon">
                 <FontAwesomeIcon icon={faAngleDown} />
               </div>
-            </div>
-            <div className="icon-button">
+            </a>
+            <a href="" className="icon-button">
               Resources
               <div className="icon">
                 <FontAwesomeIcon icon={faAngleDown} />
               </div>
-            </div>
-            <div>Interviews</div>
-            <div className="icon-button">Covid-19</div>
+            </a>
+            <a href="" className="icon-button">
+              Interviews
+            </a>
+            <a href="" className="icon-button">
+              Covid-19
+            </a>
             <button className="join-free-button">Sign In</button>
           </div>
         </div>

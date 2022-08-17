@@ -11,7 +11,7 @@ const Button = ({ selected, setSelected, options }) => {
       <div onClick={(e) => setActive(!isActive)} className="dropdown-btn">
         {selected}
         {!isActive ? (
-          <FontAwesomeIcon icon={faAngleDown} />
+          <FontAwesomeIcon className="grey" icon={faAngleDown} />
         ) : (
           <FontAwesomeIcon icon={faAngleUp} />
         )}

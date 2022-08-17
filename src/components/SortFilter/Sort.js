@@ -11,10 +11,10 @@ const Sort = ({ optiondata, data, setData, value, onchange }) => {
       <div className="bar-search">
         <input
           className="bar-search-data"
-          name="search"
+          name="Search"
           value={value}
           onChange={onchange}
-          placeholder="search..."
+          placeholder="Search..."
           type="text"
         />
         <img
@@ -24,7 +24,7 @@ const Sort = ({ optiondata, data, setData, value, onchange }) => {
         />
       </div>
       <div className="filter-bar-data">
-        <div
+        <button
           onClick={() => {
             setIsActive(!isActive);
           }}
@@ -47,17 +47,14 @@ const Sort = ({ optiondata, data, setData, value, onchange }) => {
                     className="filter-item"
                   >
                     {option}
-                    <div
-                      className={`${
-                        !isActive ? "sort-circle" : "sort-circle-colored"
-                      }`}
-                    />
+                    <div className="sort-circle" />
+                    <div className="sort-circle-colored"></div>
                   </div>
                 </>
               ))}
             </div>
           )}
-        </div>
+        </button>
       </div>
     </div>
   );

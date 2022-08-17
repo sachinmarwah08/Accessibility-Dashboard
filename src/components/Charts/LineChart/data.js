@@ -1,48 +1,48 @@
 export const data = [
   {
     name: "Jun 1, 22",
-    Worldwide: 0.5,
-    fees: -0.5,
+    Worldwide: 100,
+    fees: 80,
   },
   {
     name: "Jun 4, 22",
-    Worldwide: 1,
-    fees: -0.5,
+    Worldwide: 90,
+    fees: 60,
   },
   {
     name: "Jun 7, 22",
-    Worldwide: -1,
-    fees: -0.2,
+    Worldwide: 60,
+    fees: 40,
   },
   {
     name: "Jun 10, 22",
-    Worldwide: 1,
-    fees: 0.5,
+    Worldwide: 40,
+    fees: 20,
   },
   {
     name: "Jun 13, 22",
-    Worldwide: -1,
-    fees: 1,
+    Worldwide: 20,
+    fees: 0,
   },
   {
     name: "Jun 16, 22",
-    Worldwide: 1,
-    fees: -0.5,
+    Worldwide: 20,
+    fees: 40,
   },
   {
     name: "Jun 19, 22",
-    Worldwide: 0.5,
-    fees: 1,
+    Worldwide: 40,
+    fees: 60,
   },
   {
     name: "Jun 22, 22",
-    Worldwide: 1,
-    fees: 0.5,
+    Worldwide: 60,
+    fees: 80,
   },
   {
     name: "Jun 25, 22",
-    Worldwide: -1,
-    fees: 1,
+    Worldwide: 80,
+    fees: 100,
   },
 ];
 

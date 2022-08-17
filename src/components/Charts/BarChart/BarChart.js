@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import data from "./data";
 import shareIcon from "../../../Images/share.svg";
 import RadioButton from "../../RadioButton/RadioButton";
+import TopBottomButton from "../../TopBottomButton/TopBottomButton";
 
 const BarChartComponent = () => {
   const [isActive, setIsActive] = useState(false);
@@ -73,8 +74,10 @@ const BarChartComponent = () => {
               onchange={handleRadioChange}
             />
           </div>
-
-          <Sort setData={setBardata} data={bardata} optiondata={barData} />
+          <div className="filter-container">
+            <TopBottomButton />
+            <Sort setData={setBardata} data={bardata} optiondata={barData} />
+          </div>
         </div>
         <div className="bar-chart-wrapper">
           <div className="chart-bar">
