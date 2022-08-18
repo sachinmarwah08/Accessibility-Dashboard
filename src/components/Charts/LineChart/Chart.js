@@ -19,7 +19,7 @@ import { data } from "./data";
 
 const Chart = ({ show, showCountryTimeData }) => {
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ marginTop: "1rem", position: "relative" }}>
       <div
         style={{
           left: "1.1rem",

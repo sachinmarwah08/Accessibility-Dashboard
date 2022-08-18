@@ -123,7 +123,7 @@ const LineChartData = () => {
               </button>
             </div>
           </div>
-          {/* {!compareCountryActive ? <div className="border"></div> : null} */}
+          {!compareCountryActive ? <div className="border"></div> : null}
           {/* {!compareTimeActive ? <div className="border"></div> : null} */}
 
           {compareCountryActive === "compareCountry" && (
