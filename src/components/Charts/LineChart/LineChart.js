@@ -19,6 +19,8 @@ import { LineChartBarData } from "./data";
 import HighchartsReact from "highcharts-react-official";
 import xCircle from "../../../Images/x-circle.svg";
 import threeDots from "../../../Images/3dots.svg";
+import plus from "../../../Images/plus.svg";
+import plusTwo from "../../../Images/plusTwo.svg";
 
 const LineChartData = () => {
   const [selected, setSelected] = useState("Past 1 months");
@@ -109,14 +111,14 @@ const LineChartData = () => {
                 onClick={() => setCompareCountryActive("compareCountry")}
                 className="right-ouline-button"
               >
-                <FontAwesomeIcon icon={faPlus} />
+                <img src={plusTwo} />
                 Compare country
               </button>
               <button
                 onClick={() => setCompareCountryActive("compareTime")}
                 className="right-ouline-buttonTwo"
               >
-                <FontAwesomeIcon icon={faPlus} />
+                <img src={plus} />
                 Compare time
               </button>
             </div>

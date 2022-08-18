@@ -19,7 +19,17 @@ import { data } from "./data";
 
 const Chart = ({ show, showCountryTimeData }) => {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
+      <div
+        style={{
+          left: "1.1rem",
+          top: " 0.5rem",
+          color: "rgba(20, 20, 75, 0.6)",
+          position: "absolute",
+        }}
+      >
+        (MM)
+      </div>
       <ResponsiveContainer width="100%" aspect={4}>
         <LineChart
           data={data}

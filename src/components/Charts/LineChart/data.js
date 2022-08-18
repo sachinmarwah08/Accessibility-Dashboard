@@ -1,32 +1,33 @@
 export const data = [
   {
     name: "Jun 1, 22",
-    Worldwide: 100,
+    labels: "MM",
+    Worldwide: "100",
     fees: 80,
   },
   {
     name: "Jun 4, 22",
-    Worldwide: 90,
+    Worldwide: 80,
     fees: 60,
   },
   {
     name: "Jun 7, 22",
-    Worldwide: 60,
+    Worldwide: 90,
     fees: 40,
   },
   {
     name: "Jun 10, 22",
-    Worldwide: 40,
+    Worldwide: 60,
     fees: 20,
   },
   {
     name: "Jun 13, 22",
-    Worldwide: 20,
+    Worldwide: 50,
     fees: 0,
   },
   {
     name: "Jun 16, 22",
-    Worldwide: 20,
+    Worldwide: 70,
     fees: 40,
   },
   {
@@ -36,12 +37,12 @@ export const data = [
   },
   {
     name: "Jun 22, 22",
-    Worldwide: 60,
+    Worldwide: 90,
     fees: 80,
   },
   {
     name: "Jun 25, 22",
-    Worldwide: 80,
+    Worldwide: 70,
     fees: 100,
   },
 ];

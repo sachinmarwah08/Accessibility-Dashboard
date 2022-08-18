@@ -33,6 +33,11 @@
 
       .line-one {
         display: flex;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
         .one {
           font-size: 16px;
           font-weight: 400;
@@ -43,17 +48,28 @@
       .line-two {
         display: flex;
         margin-top: -1rem;
+
         .two-one {
           font-size: 16px;
           font-weight: 400;
           color: #990099;
           margin-left: 15rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .two-two {
           font-size: 16px;
           font-weight: 400;
           color: #990099;
           margin-left: 10rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .two-three {
           font-size: 16px;
@@ -61,28 +77,48 @@
           color: #330099;
           margin-top: -0.5rem;
           margin-left: 4rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .two-four {
           font-size: 16px;
           font-weight: 400;
           color: #990099;
           margin-left: 6rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .two-five {
           font-size: 23px;
           font-weight: 400;
           color: #990099;
           margin-left: 6rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
       .line-three {
         display: flex;
-        margin-top: -1.5rem;
+        margin-top: -1rem;
         .three-one {
           font-size: 16px;
           font-weight: 400;
           color: #990099;
           margin-left: 6rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .three-two {
           font-size: 47px;
@@ -90,6 +126,11 @@
           color: #990099;
           margin-left: 4rem;
           margin-top: -0.5rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .three-three {
           font-size: 33px;
@@ -97,18 +138,33 @@
           color: #990099;
           margin-top: 0rem;
           margin-left: 4rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .three-four {
           font-size: 16px;
           font-weight: 400;
           color: #990099;
           margin-left: 4rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .three-five {
           font-size: 19px;
           font-weight: 400;
           color: #990099;
-          margin-left: 8rem;
+          margin-left: 3.2rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .three-six {
           font-size: 16px;
@@ -116,6 +172,11 @@
           margin-top: -0.1rem;
           color: #990099;
           margin-left: 2rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
 
@@ -127,6 +188,11 @@
           font-weight: 400;
           color: #330099;
           margin-left: 1rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .four-two {
           font-size: 16px;
@@ -134,6 +200,11 @@
           color: #990099;
           margin-left: 2rem;
           margin-top: -0.5rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .four-three {
           font-size: 16px;
@@ -141,6 +212,11 @@
           color: #990099;
           margin-top: -1rem;
           margin-left: 2rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
       .line-five {
@@ -152,6 +228,11 @@
           color: #990099;
           margin-left: 10rem;
           margin-top: 0.5rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .five-two {
           font-size: 68px;
@@ -159,6 +240,11 @@
           color: #990099;
           margin-left: 2rem;
           margin-top: -3rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .five-three {
           font-size: 27px;
@@ -166,13 +252,23 @@
           color: #990099;
           margin-top: 0rem;
           margin-left: 4rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .five-four {
           font-size: 16px;
           font-weight: 400;
           color: #990099;
           margin-top: 0rem;
-          margin-left: 6rem;
+          margin-left: 4rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .five-five {
           font-size: 16px;
@@ -180,6 +276,11 @@
           color: #990099;
           margin-top: -1rem;
           margin-left: 2rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
       .line-six {
@@ -191,6 +292,11 @@
           color: #330099;
           margin-top: -2rem;
           margin-left: 14rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .six-two {
           font-size: 16px;
@@ -198,6 +304,11 @@
           color: #990099;
           margin-left: 1rem;
           margin-top: 0.5rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .six-three {
           font-size: 39px;
@@ -205,6 +316,11 @@
           color: #990099;
           margin-top: -1rem;
           margin-left: 3rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
         .six-four {
           font-size: 57px;
@@ -212,6 +328,11 @@
           color: #990099;
           margin-top: -1rem;
           margin-left: 6rem;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
 

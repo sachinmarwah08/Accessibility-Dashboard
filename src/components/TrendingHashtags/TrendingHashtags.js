@@ -13,6 +13,7 @@ const TrendingHashtags = () => {
               {item.hashtags}
             </div>
           ))} */}
+
           <div className="line-one">
             <p className="one">#strength</p>
           </div>
