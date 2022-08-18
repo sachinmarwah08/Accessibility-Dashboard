@@ -42,13 +42,17 @@
 }
 
 .sort-filter-wrapper {
+  // padding-left: 1rem;
+  padding-right: 1.05rem;
   display: flex;
   align-items: center;
-  padding: 0.403rem;
+  // padding: 0.403rem;
+  padding-top: 0.403rem;
+  padding-bottom: 0.403rem;
   justify-content: space-around;
   width: auto;
   margin: 0%;
-  padding-left: 0.3rem;
+  padding-left: 1.05rem;
   cursor: pointer;
   gap: 0.8rem;
   border: 1px solid #eeeeee;
