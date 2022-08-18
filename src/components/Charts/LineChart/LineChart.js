@@ -31,7 +31,6 @@ const LineChartData = () => {
   const [contryNameState, setContryNameState] = useState("");
   const [isValue, setIsValue] = useState(false);
   const [compareCountryActive, setCompareCountryActive] = useState("");
-  // const [compareTimeActive, setCompareTimeActive] = useState(false);
   const [chooseTime, setChooseTime] = useState(false);
   const [dateValue, setDateValue] = useState("");
 
@@ -97,6 +96,7 @@ const LineChartData = () => {
               </div>
               <div className="select-date-btn">
                 <Button
+                  disabled={dateValue}
                   options={dateSelect}
                   selected={selected}
                   setSelected={setSelected}
@@ -171,6 +171,7 @@ const LineChartData = () => {
               )}
             </div>
           )}
+
           {compareCountryActive === "compareTime" && (
             <div className="Add-country">
               <div className="country">
@@ -179,39 +180,43 @@ const LineChartData = () => {
               </div>
 
               {!dateValue && (
-                <button
-                  onClick={() => setChooseTime(!chooseTime)}
-                  className="compare-time"
-                >
-                  <>
-                    <span className="faplus">
-                      <FontAwesomeIcon icon={faAngleDown} />
-                    </span>
-                    <p className="title">Choose Time</p>
-                    {chooseTime && (
-                      <div className="dropdown-content">
-                        <div
-                          onClick={() => setDateValue("July, 2022")}
-                          className="drop-item"
-                        >
-                          July, 2022
+                <div className="country-time">
+                  <button
+                    onClick={() => setChooseTime(!chooseTime)}
+                    className={`${
+                      !chooseTime ? "compare-time" : "compare-time-with-border"
+                    }`}
+                  >
+                    <>
+                      <span className="faplus">
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </span>
+                      <p className="title">Choose Time</p>
+                      {chooseTime && (
+                        <div className="dropdown-content">
+                          <div
+                            onClick={() => setDateValue("July, 2022")}
+                            className="drop-item"
+                          >
+                            July, 2022
+                          </div>
+                          <div
+                            onClick={() => setDateValue("July, 2023")}
+                            className="drop-item"
+                          >
+                            July, 2023
+                          </div>
+                          <div
+                            onClick={() => setDateValue("July, 2024")}
+                            className="drop-item"
+                          >
+                            July, 2024
+                          </div>
                         </div>
-                        <div
-                          onClick={() => setDateValue("July, 2023")}
-                          className="drop-item"
-                        >
-                          July, 2023
-                        </div>
-                        <div
-                          onClick={() => setDateValue("July, 2024")}
-                          className="drop-item"
-                        >
-                          July, 2024
-                        </div>
-                      </div>
-                    )}
-                  </>
-                </button>
+                      )}
+                    </>
+                  </button>
+                </div>
               )}
 
               {dateValue && (
@@ -232,7 +237,7 @@ const LineChartData = () => {
           )}
         </div>
         <div className="chart">
-          {isValue ? (
+          {isValue || dateValue ? (
             <div className="bar-chart-line">
               <HighchartsReact
                 highcharts={Highcharts}
@@ -245,10 +250,12 @@ const LineChartData = () => {
 
           <div
             className={`${
-              isValue ? "line-chart-bar" : "line-chart-bar-condition"
+              isValue || dateValue
+                ? "line-chart-bar"
+                : "line-chart-bar-condition"
             }`}
           >
-            <Chart show={isValue} />
+            <Chart show={isValue || dateValue} />
           </div>
         </div>
       </div>

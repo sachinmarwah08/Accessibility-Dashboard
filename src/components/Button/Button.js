@@ -8,18 +8,21 @@ const Button = ({ selected, setSelected, options, disabled }) => {
 
   return (
     <div className="dropdown">
-      <div
+      <button
         style={disabled ? { cursor: "not-allowed" } : {}}
         onClick={disabled ? () => {} : (e) => setActive(!isActive)}
-        className="dropdown-btn"
+        className={`${disabled ? "dropdown-btn-disabled" : "dropdown-btn"}`}
       >
         {selected}
         {!isActive ? (
-          <FontAwesomeIcon className="grey" icon={faAngleDown} />
+          <FontAwesomeIcon
+            className={`${disabled ? "grey-disabled" : "grey"}`}
+            icon={faAngleDown}
+          />
         ) : (
           <FontAwesomeIcon icon={faAngleUp} />
         )}
-      </div>
+      </button>
 
       {isActive && (
         <div className="dropdown-content">

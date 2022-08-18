@@ -17,7 +17,7 @@ import {
 } from "recharts";
 import { data } from "./data";
 
-const Chart = ({ show }) => {
+const Chart = ({ show, showCountryTimeData }) => {
   return (
     <div>
       <ResponsiveContainer width="100%" aspect={4}>

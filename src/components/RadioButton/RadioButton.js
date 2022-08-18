@@ -3,7 +3,7 @@ import "./RadioButton.scss";
 
 const RadioButton = ({ checked, onchange, value, name }) => {
   return (
-    <div onClick={() => onchange(value)} className="radio-button">
+    <button onClick={() => onchange(value)} className="radio-button">
       <label className="container">
         <p className="positive">{name}</p>
         <input
@@ -13,7 +13,7 @@ const RadioButton = ({ checked, onchange, value, name }) => {
         />
         <span className="checkmark"></span>
       </label>
-    </div>
+    </button>
   );
 };
 
