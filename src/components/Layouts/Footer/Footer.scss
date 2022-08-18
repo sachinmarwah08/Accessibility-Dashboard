@@ -139,5 +139,35 @@
   .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.13);
     width: 80%;
+    height: auto;
+    padding-bottom: 1.5rem;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+    .copyright-label {
+      font-size: 12px;
+      margin-top: 1.5rem;
+      font-weight: 300;
+      color: #949ab9;
+    }
+    .copyright-colored {
+      font-size: 12px;
+      font-weight: 300;
+      color: white;
+      text-decoration: underline;
+      margin-left: 0.2rem;
+    }
+
+    .social-icon {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 10px;
+      .icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
   }
 }

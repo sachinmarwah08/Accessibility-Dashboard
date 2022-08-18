@@ -170,7 +170,7 @@
         z-index: 1000;
         top: 100%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        height: 100%;
+        height: auto;
 
         .drop-item {
           font-size: 20px;
@@ -195,6 +195,19 @@
         width: 1.292rem;
         margin-right: 0.5rem;
         background-color: #2a00ff;
+        height: 0.167rem;
+        transform: rotate(180deg);
+        display: flex;
+
+        @media (max-width: 998px) {
+          width: 0.5rem;
+          height: 0.5rem;
+        }
+      }
+      .circle-line-added-country-time {
+        width: 2rem;
+        margin-right: 1rem;
+        background-color: #db4537;
         height: 0.167rem;
         transform: rotate(180deg);
         display: flex;

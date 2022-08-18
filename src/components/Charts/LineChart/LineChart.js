@@ -30,9 +30,10 @@ const LineChartData = () => {
   const [addCountry, setaddCountry] = useState(false);
   const [contryNameState, setContryNameState] = useState("");
   const [isValue, setIsValue] = useState(false);
-  const [compareCountryActive, setCompareCountryActive] = useState(false);
-  const [compareTimeActive, setCompareTimeActive] = useState(false);
+  const [compareCountryActive, setCompareCountryActive] = useState("");
+  // const [compareTimeActive, setCompareTimeActive] = useState(false);
   const [chooseTime, setChooseTime] = useState(false);
+  const [dateValue, setDateValue] = useState("");
 
   const navigateHome = () => {
     navigate("/");
@@ -88,6 +89,7 @@ const LineChartData = () => {
             <div className="left-button">
               <div className="select-country-btn">
                 <Button
+                  disabled={isValue}
                   options={countrySelect}
                   selected={selectCountry}
                   setSelected={setselectCountry}
@@ -103,14 +105,14 @@ const LineChartData = () => {
             </div>
             <div className="right-button">
               <button
-                onClick={() => setCompareCountryActive(!compareCountryActive)}
+                onClick={() => setCompareCountryActive("compareCountry")}
                 className="right-ouline-button"
               >
                 <FontAwesomeIcon icon={faPlus} />
                 Compare country
               </button>
               <button
-                onClick={() => setCompareTimeActive(!compareTimeActive)}
+                onClick={() => setCompareCountryActive("compareTime")}
                 className="right-ouline-buttonTwo"
               >
                 <FontAwesomeIcon icon={faPlus} />
@@ -121,7 +123,7 @@ const LineChartData = () => {
           {/* {!compareCountryActive ? <div className="border"></div> : null} */}
           {/* {!compareTimeActive ? <div className="border"></div> : null} */}
 
-          {compareCountryActive && (
+          {compareCountryActive === "compareCountry" && (
             <div className="Add-country">
               <div className="country">
                 <img alt="image" src={threeDots} />
@@ -169,40 +171,63 @@ const LineChartData = () => {
               )}
             </div>
           )}
-          {compareTimeActive && (
+          {compareCountryActive === "compareTime" && (
             <div className="Add-country">
               <div className="country">
                 <img alt="image" src={threeDots} />
-                <p className="title">Time</p>
+                <p className="title">July, 2023</p>
               </div>
-              <button
-                onClick={() => setChooseTime(!chooseTime)}
-                className="compare-time"
-              >
-                <>
-                  <span className="faplus">
-                    <FontAwesomeIcon icon={faAngleDown} />
-                  </span>
-                  <p className="title">Choose Time</p>
-                  {chooseTime && (
-                    <div className="dropdown-content">
-                      <div className="drop-item">July, 2022</div>
-                    </div>
-                  )}
-                </>
-              </button>
-              <div className="country-added">
-                <span className="circle-line-added-country"></span>
-                <p className="title-line-added-country">
-                  {contryNameState}
-                  <button
-                    className="close-addCountry-btn"
-                    onClick={closeAddCountry}
-                  >
-                    <img alt="xCircle" src={xCircle} />
-                  </button>
-                </p>
-              </div>
+
+              {!dateValue && (
+                <button
+                  onClick={() => setChooseTime(!chooseTime)}
+                  className="compare-time"
+                >
+                  <>
+                    <span className="faplus">
+                      <FontAwesomeIcon icon={faAngleDown} />
+                    </span>
+                    <p className="title">Choose Time</p>
+                    {chooseTime && (
+                      <div className="dropdown-content">
+                        <div
+                          onClick={() => setDateValue("July, 2022")}
+                          className="drop-item"
+                        >
+                          July, 2022
+                        </div>
+                        <div
+                          onClick={() => setDateValue("July, 2023")}
+                          className="drop-item"
+                        >
+                          July, 2023
+                        </div>
+                        <div
+                          onClick={() => setDateValue("July, 2024")}
+                          className="drop-item"
+                        >
+                          July, 2024
+                        </div>
+                      </div>
+                    )}
+                  </>
+                </button>
+              )}
+
+              {dateValue && (
+                <div className="country-added">
+                  <span className="circle-line-added-country-time"></span>
+                  <p className="title-line-added-country">
+                    {dateValue}
+                    <button
+                      className="close-addCountry-btn"
+                      onClick={() => setDateValue("")}
+                    >
+                      <img alt="xCircle" src={xCircle} />
+                    </button>
+                  </p>
+                </div>
+              )}
             </div>
           )}
         </div>

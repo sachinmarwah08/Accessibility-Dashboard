@@ -3,12 +3,16 @@ import "./Button.scss";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Button = ({ selected, setSelected, options }) => {
+const Button = ({ selected, setSelected, options, disabled }) => {
   const [isActive, setActive] = useState(false);
 
   return (
     <div className="dropdown">
-      <div onClick={(e) => setActive(!isActive)} className="dropdown-btn">
+      <div
+        style={disabled ? { cursor: "not-allowed" } : {}}
+        onClick={disabled ? () => {} : (e) => setActive(!isActive)}
+        className="dropdown-btn"
+      >
         {selected}
         {!isActive ? (
           <FontAwesomeIcon className="grey" icon={faAngleDown} />
@@ -22,7 +26,7 @@ const Button = ({ selected, setSelected, options }) => {
           {options.map((option) => (
             <div
               onClick={(e) => {
-                setSelected(option.title);
+                setSelected(option);
                 setActive(false);
               }}
               className="dropdown-item"

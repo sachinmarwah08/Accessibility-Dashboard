@@ -2,6 +2,10 @@ import React from "react";
 import "./Footer.scss";
 import logo from "../../../Images/footerLogo.svg";
 import Caraosel from "./Caraosel";
+import linkDin from "../../../Images/linkedin.svg";
+import facebook from "../../../Images/facebook.svg";
+import twitter from "../../../Images/twitter.svg";
+import youtube from "../../../Images/youtube.svg";
 
 const Footer = () => {
   return (
@@ -40,12 +44,22 @@ const Footer = () => {
       <div className="second-footer-container">
         <div className="second-footer-content">
           <h1 className="heading">in partnership with</h1>
-          <div className="carousel">
-            <Caraosel />
-          </div>
+
+          <Caraosel />
         </div>
       </div>
-      <div className="copyright"></div>
+      <div className="copyright">
+        <div className="copyright-label">
+          copyright 2020 © citiesabc powered by
+          <span className="copyright-colored">techabc</span>
+        </div>
+        <div className="social-icon">
+          <img className="icon" src={linkDin} />
+          <img className="icon" src={facebook} />
+          <img className="icon" src={twitter} />
+          <img className="icon" src={youtube} />
+        </div>
+      </div>
     </div>
   );
 };
