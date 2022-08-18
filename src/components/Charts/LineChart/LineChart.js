@@ -6,6 +6,7 @@ import shareIcon from "../../../Images/share.svg";
 import {
   faPlus,
   faArrowLeft,
+  faAngleUp,
   faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -189,7 +190,11 @@ const LineChartData = () => {
                   >
                     <>
                       <span className="faplus">
-                        <FontAwesomeIcon icon={faAngleDown} />
+                        {!chooseTime ? (
+                          <FontAwesomeIcon icon={faAngleDown} />
+                        ) : (
+                          <FontAwesomeIcon icon={faAngleUp} />
+                        )}
                       </span>
                       <p className="title">Choose Time</p>
                       {chooseTime && (
