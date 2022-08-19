@@ -12,7 +12,9 @@ const GlobalWellbeing = () => {
         <div className="column-one">
           <p className="digit-one">1.01 MM</p>
           <p className="value-one">Current Day Value </p>
-          <p className="date">As of 3 August, 2022</p>
+          <p className="date">
+            <span className="as">As of</span> 3 August, 2022
+          </p>
         </div>
         <div className="column-two">
           <p className="column-two-digit-one">+0.5 MM</p>
