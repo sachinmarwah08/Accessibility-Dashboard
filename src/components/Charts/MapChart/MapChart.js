@@ -1,41 +1,53 @@
 import React, { useState } from "react";
 import "./MapChart.scss";
-import WorldMap from "../../../Images/earth.svg";
-import Table from "../../../Images/Table.png";
-import shareIcon from "../../../Images/share.svg";
-import GoogleMap from "./googleMap";
+import WorldMap from "../../../Images/newEarth.svg";
+import Table from "../../../Images/table.svg";
+import shareIcon from "../../../Images/share-2.svg";
+import GoogleMap from "./GoogleMap";
+import TableData from "./Table";
 import Sort from "../../SortFilter/Sort";
 import RadioButton from "../../RadioButton/RadioButton";
 
 const MapChartComponent = () => {
-  const mapData = ["influencer", "hashtags"];
+  const mapData = ["Influencer", "Hashtags"];
   const [mapdata, setMapData] = useState("Filter");
-  const [isRadioChecked, setIsRadioChecked] = useState(0);
+  const [isRadioChecked, setIsRadioChecked] = useState(1);
+  const [show, setShow] = useState("map");
 
   const handleRadioChange = (value) => {
     setIsRadioChecked(value);
-    console.log(value);
   };
 
   return (
     <div className="map-wrapper">
       <div className="content-map">
         <div className="heading-map">
-          <h1 className="heading">Global Interest in Accessibility</h1>
+          <h1 className="heading">
+            Global {isRadioChecked === 1 ? " Interest " : " Sentiment "}
+            in Accessibility
+          </h1>
           <div className="side-logos">
-            <img alt="WorldMap" className="WorldMap" src={WorldMap}></img>
-            <img alt="Table" className="table" src={Table}></img>
-            <img alt="BigArrow" className="bigArrow" src={shareIcon}></img>
+            <button onClick={() => setShow("map")}>
+              <img alt="WorldMap" className="WorldMap" src={WorldMap}></img>
+            </button>
+            <button onClick={() => setShow("table")}>
+              <img alt="Table" className="table" src={Table}></img>
+            </button>
+            <button>
+              <img alt="BigArrow" className="bigArrow" src={shareIcon}></img>
+            </button>
           </div>
         </div>
         <div className="radio-map-btn">
           <RadioButton
+            radioName="Map"
             name="Interest"
             checked={isRadioChecked}
             value={1}
             onchange={handleRadioChange}
           />
           <RadioButton
+            radioName="Map"
             name="Sentiment"
             checked={isRadioChecked}
             value={2}
@@ -47,9 +59,13 @@ const MapChartComponent = () => {
         </div>
       </div>
       <div className="bar-map-wrapper">
-        <div className="chart-map">
-          <GoogleMap />
-        </div>
+        {show === "map" && (
+          <div className="chart-map">
+            <GoogleMap />
+          </div>
+        )}
+
+        {show === "table" && <TableData />}
       </div>
     </div>
   );

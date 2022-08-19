@@ -10,11 +10,10 @@ import TopBottomButton from "../../TopBottomButton/TopBottomButton";
 const TopInfluencer = () => {
   const trendingData = ["Country", "Influencer", "Hashtag"];
   const [trendData, setTrendData] = useState("Filter");
-  const [isRadioChecked, setIsRadioChecked] = useState(0);
+  const [isRadioChecked, setIsRadioChecked] = useState(1);
 
   const handleRadioChange = (value) => {
     setIsRadioChecked(value);
-    console.log(value);
   };
   return (
     <div className="right-container">
@@ -22,7 +21,7 @@ const TopInfluencer = () => {
         <div className="right-heading">Influencer Analysis</div>
         <div className="icons">
           <p className="score">
-            <span className="digits">13569</span> Influencers
+            13569 <span className="digits">Influencers</span>
           </p>
 
           <img alt="share-icon" className="share-img" src={shareIcon} />
@@ -30,24 +29,34 @@ const TopInfluencer = () => {
       </div>
       <div className="trending-radioBtn">
         <RadioButton
+          radioName="topInfluencer"
           name="All"
           checked={isRadioChecked}
           value={1}
           onchange={handleRadioChange}
         />
         <RadioButton
+          radioName="topInfluencer"
           name="Person"
           checked={isRadioChecked}
           value={2}
           onchange={handleRadioChange}
         />
         <RadioButton
+          radioName="topInfluencer"
           name="Organisation"
           checked={isRadioChecked}
           value={3}
           onchange={handleRadioChange}
         />
-        <TopBottomButton />
+        <RadioButton
+          radioName="topInfluencer"
+          name="Media House"
+          checked={isRadioChecked}
+          value={4}
+          onchange={handleRadioChange}
+        />
+        {/* <TopBottomButton /> */}
       </div>
 
       <div className="trending-sort">

@@ -3,26 +3,18 @@ import "./BarChart.scss";
 import Highcharts from "highcharts";
 import Sort from "../../SortFilter/Sort";
 import HighchartsReact from "highcharts-react-official";
-import {
-  faAngleDown,
-  faArrowDownShortWide,
-  faArrowUpWideShort,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import data from "./data";
-import shareIcon from "../../../Images/share.svg";
+import shareIcon from "../../../Images/share-2.svg";
 import RadioButton from "../../RadioButton/RadioButton";
 import TopBottomButton from "../../TopBottomButton/TopBottomButton";
 
 const BarChartComponent = () => {
-  const [isActive, setIsActive] = useState(false);
   const barData = ["Influencer", "Hashtag"];
   const [bardata, setBardata] = useState("Filter");
-  const [isRadioChecked, setIsRadioChecked] = useState(0);
+  const [isRadioChecked, setIsRadioChecked] = useState(1);
 
   const handleRadioChange = (value) => {
     setIsRadioChecked(value);
-    console.log(value);
   };
 
   return (
@@ -32,42 +24,33 @@ const BarChartComponent = () => {
           <div className="bar-heading-wrapper">
             <div className="heading-left">
               <h1 className="heading">
-                Countries Rankings by Accessibility Interest
+                Countries Rankings by Accessibility
+                {isRadioChecked === 1 ? " Interest" : " Sentiment"}
               </h1>
             </div>
             <div className="btn-share">
-              {/* <button
-                onClick={() => setIsActive(!isActive)}
-                className="heading-button"
-              >
-                <FontAwesomeIcon icon={faAngleDown} />
-                Top 10
-                {isActive && (
-                  <div className="dropdown-bar-filter">
-                    <div className="dropdown-item">
-                      High to Low <FontAwesomeIcon icon={faArrowUpWideShort} />
-                    </div>
-                    <div className="dropdown-item">
-                      Low to High
-                      <FontAwesomeIcon icon={faArrowDownShortWide} />
-                    </div>
-                  </div>
-                )}
-              </button> */}
               <button className="share-btn">
-                <img alt="share-icon-bar" src={shareIcon} />
+                <img
+                  className="sharetwo"
+                  alt="share-icon-bar"
+                  src={shareIcon}
+                />
               </button>
             </div>
           </div>
 
           <div className="radio-bar-btn">
             <RadioButton
+              radioName="Bar"
+              userId="radioForInterest"
               name="Interest"
               checked={isRadioChecked}
               value={1}
               onchange={handleRadioChange}
             />
             <RadioButton
+              radioName="Bar"
+              userId="radioForSentiment"
               name="Sentiment"
               checked={isRadioChecked}
               value={2}

@@ -63,6 +63,21 @@
         background: transparent;
         padding: 0%;
 
+        .sharetwo {
+          width: 24px;
+          height: 24px;
+          padding: 8px;
+
+          &:hover {
+            border-radius: 4px;
+            background: linear-gradient(
+              63.43deg,
+              rgba(153, 0, 153, 0.12) 16.67%,
+              rgba(0, 51, 204, 0.12) 100%
+            );
+          }
+        }
+
         .share-icon-bar {
           @media (max-width: 998px) {
             width: 8px;

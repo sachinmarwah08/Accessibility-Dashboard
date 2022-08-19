@@ -99,7 +99,7 @@ const data = {
   },
   series: [
     {
-      name: "Organic farming area",
+      name: "Interest: 10.2M",
       color: "rgba(100, 143, 255, 0.5)",
       // color: "rgba(240, 87, 40, 0.35)",
       // borderColor: "rgba(240, 87, 40, 0.35)",

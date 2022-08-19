@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./Sort.scss";
 import filterBarLogo from "../../Images/Icon.svg";
 import searchBarLogo from "../../Images/search.svg";
+import RadioButton from "../RadioButton/RadioButton";
 
 const Sort = ({ optiondata, data, setData, value, onchange }) => {
   const [isActive, setIsActive] = useState(false);
+  // const [optionRadioValue, setOptionRadioValue] = useState("Influencer");
 
   return (
     <div className="search-bar-filter">
@@ -47,8 +49,19 @@ const Sort = ({ optiondata, data, setData, value, onchange }) => {
                     className="filter-item"
                   >
                     {option}
-                    <div className="sort-circle" />
-                    <div className="sort-circle-colored"></div>
+                    {/* <RadioButton
+                      radioName="sort"
+                      name={option}
+                      value={option}
+                      checked={optionRadioValue}
+                      onchange={() => setOptionRadioValue(option)}
+                    /> */}
+
+                    <div className="sort-circle">
+                      {data === option && (
+                        <div className="sort-circle-colored"></div>
+                      )}
+                    </div>
                   </div>
                 </>
               ))}

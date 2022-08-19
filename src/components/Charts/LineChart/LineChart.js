@@ -25,8 +25,20 @@ import plusTwo from "../../../Images/plusTwo.svg";
 const LineChartData = () => {
   const [selected, setSelected] = useState("Past 1 months");
   const [selectCountry, setselectCountry] = useState("Worldwide");
-  const dateSelect = ["react ", "vue", "Angular"];
-  const countrySelect = ["react ", "vue", "Angular"];
+  const dateSelect = [
+    "Past Day ",
+    "Past 7 Days",
+    "Past 30 Days",
+    "Past 90 Days",
+    "Past Year",
+  ];
+  const countrySelect = [
+    "India ",
+    "United States",
+    "Canada",
+    "United Kingdom",
+    "Worldwide",
+  ];
   const [openModal, setOpenModal] = useState(false);
   const router = useLocation();
   const navigate = useNavigate();
@@ -124,7 +136,6 @@ const LineChartData = () => {
             </div>
           </div>
           {!compareCountryActive ? <div className="border"></div> : null}
-          {/* {!compareTimeActive ? <div className="border"></div> : null} */}
 
           {compareCountryActive === "compareCountry" && (
             <div className="Add-country">
@@ -179,7 +190,7 @@ const LineChartData = () => {
             <div className="Add-country">
               <div className="country">
                 <img alt="image" src={threeDots} />
-                <p className="title">July, 2023</p>
+                <p className="title">June, 2022</p>
               </div>
 
               {!dateValue && (

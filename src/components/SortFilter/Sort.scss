@@ -50,7 +50,7 @@
   padding-top: 0.403rem;
   padding-bottom: 0.403rem;
   justify-content: space-around;
-  width: auto;
+  width: 100%;
   margin: 0%;
   padding-left: 1.05rem;
   cursor: pointer;
@@ -72,9 +72,9 @@
     align-items: center;
 
     top: 120%;
-    width: 110%;
+    width: 100%;
     cursor: pointer;
-    left: -32%;
+    left: -20%;
     padding: 0.625rem;
     padding-top: 0%;
     padding-bottom: 0%;
@@ -101,19 +101,20 @@
 
     .filter-item {
       align-items: center;
-      position: relative;
+      // position: relative;
       padding: 0.625rem;
       justify-content: space-between;
       display: flex;
       transition: all 0.2s;
       z-index: 100;
+      color: #14144b;
       // gap: 0.625rem;
       width: 100%;
       text-align: left;
       font-size: 0.875rem;
 
       .sort-circle {
-        // position: relative;
+        position: relative;
         width: 0.813rem;
         height: 0.813rem;
         border-radius: 50%;
@@ -123,7 +124,8 @@
       .sort-circle-colored {
         position: absolute;
         width: 0.3rem;
-        left: 5.62rem;
+        left: 4.5px;
+        top: 4px;
         height: 0.3rem;
         background-color: #14144b;
         border-radius: 50%;

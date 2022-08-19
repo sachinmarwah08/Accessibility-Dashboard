@@ -2,7 +2,7 @@ export const data = [
   {
     name: "Jun 1, 22",
     labels: "MM",
-    Worldwide: "100",
+    Worldwide: 100,
     fees: 80,
   },
   {
@@ -12,28 +12,28 @@ export const data = [
   },
   {
     name: "Jun 7, 22",
-    Worldwide: 90,
-    fees: 40,
+    Worldwide: 40,
+    fees: 100,
   },
   {
     name: "Jun 10, 22",
     Worldwide: 60,
-    fees: 20,
+    fees: 40,
   },
   {
     name: "Jun 13, 22",
     Worldwide: 50,
-    fees: 0,
+    fees: 30,
   },
   {
     name: "Jun 16, 22",
     Worldwide: 70,
-    fees: 40,
+    fees: 50,
   },
   {
     name: "Jun 19, 22",
     Worldwide: 40,
-    fees: 60,
+    fees: 30,
   },
   {
     name: "Jun 22, 22",
@@ -130,11 +130,11 @@ export const LineChartBarData = {
       },
     },
   },
-  tooltip: {
-    valueSuffix: "%",
-    stickOnContact: false,
-    backgroundColor: "rgba(255, 255, 255, 0.93)",
-  },
+  // tooltip: {
+  //   valueSuffix: "%",
+  //   stickOnContact: false,
+  //   backgroundColor: "rgba(255, 255, 255, 0.93)",
+  // },
   legend: {
     enabled: false,
   },

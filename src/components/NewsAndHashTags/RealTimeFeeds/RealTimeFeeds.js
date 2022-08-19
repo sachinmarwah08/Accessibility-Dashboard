@@ -12,13 +12,12 @@ const RealTimeFeeds = () => {
   const [filterData, setFilterData] = useState(data);
   const [wordEntered, setWordEntered] = useState("");
   const [active, setActive] = useState("Real-time-Tweets");
-  const realTimeData = ["Influencer", "hashtags"];
+  const realTimeData = ["Influencer", "Country", "Hashtags"];
   const [realData, setRealData] = useState("Filter");
-  const [isRadioChecked, setIsRadioChecked] = useState(0);
+  const [isRadioChecked, setIsRadioChecked] = useState(1);
 
   const handleRadioChange = (value) => {
     setIsRadioChecked(value);
-    console.log(value);
   };
 
   const handleFilter = (event) => {
@@ -70,12 +69,14 @@ const RealTimeFeeds = () => {
       </div>
       <div className="realTime-radioBtn">
         <RadioButton
+          radioName="realTimeTweets"
           name="Positive sentiment"
           checked={isRadioChecked}
           value={1}
           onchange={handleRadioChange}
         />
         <RadioButton
+          radioName="realTimeTweets"
           name="Negative sentiment"
           checked={isRadioChecked}
           value={2}
