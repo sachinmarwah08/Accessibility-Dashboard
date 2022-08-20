@@ -185,10 +185,14 @@
             font-weight: 600;
             align-items: center;
             width: max-content;
-
             margin: auto;
             padding: 0.7rem;
             color: #14144b;
+            cursor: pointer;
+
+            &:hover {
+              color: #990099;
+            }
           }
         }
       }
@@ -498,6 +502,7 @@
         font-size: 0.75rem;
       }
     }
+
     .right-ouline-buttonTwo {
       display: flex;
       align-items: center;

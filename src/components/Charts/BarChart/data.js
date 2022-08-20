@@ -74,7 +74,7 @@ const data = {
         display: "none",
       },
       overflow: "justify",
-      format: "{value}%",
+      // format: "{value}%",
     },
   },
   plotOptions: {
@@ -85,12 +85,12 @@ const data = {
     bar: {
       dataLabels: {
         enabled: false,
-        format: "{y}%",
+        // format: "{y}%",
       },
     },
   },
   tooltip: {
-    valueSuffix: "%",
+    valueSuffix: "M",
     stickOnContact: false,
     backgroundColor: "rgba(255, 255, 255, 0.93)",
   },
@@ -99,7 +99,7 @@ const data = {
   },
   series: [
     {
-      name: "Interest: 10.2M",
+      name: "Interest",
       color: "rgba(100, 143, 255, 0.5)",
       // color: "rgba(240, 87, 40, 0.35)",
       // borderColor: "rgba(240, 87, 40, 0.35)",

@@ -121,16 +121,32 @@ const LineChartData = () => {
             <div className="right-button">
               <button
                 onClick={() => setCompareCountryActive("compareCountry")}
-                className="right-ouline-button"
+                className={`${
+                  compareCountryActive === "compareCountry"
+                    ? "right-ouline-button"
+                    : "right-ouline-buttonTwo"
+                }`}
               >
-                <img alt="plusIcon" src={plusTwo} />
+                {compareCountryActive === "compareCountry" ? (
+                  <img alt="plusIcon" src={plusTwo} />
+                ) : (
+                  <img alt="plus" src={plus} />
+                )}
                 Compare country
               </button>
               <button
                 onClick={() => setCompareCountryActive("compareTime")}
-                className="right-ouline-buttonTwo"
+                className={`${
+                  compareCountryActive === "compareTime"
+                    ? "right-ouline-button"
+                    : "right-ouline-buttonTwo"
+                }`}
               >
-                <img alt="plus" src={plus} />
+                {compareCountryActive === "compareTime" ? (
+                  <img alt="plusIcon" src={plusTwo} />
+                ) : (
+                  <img alt="plus" src={plus} />
+                )}
                 Compare time
               </button>
             </div>
@@ -218,18 +234,6 @@ const LineChartData = () => {
                           >
                             July, 2022
                           </div>
-                          <div
-                            onClick={() => setDateValue("July, 2023")}
-                            className="drop-item"
-                          >
-                            July, 2023
-                          </div>
-                          <div
-                            onClick={() => setDateValue("July, 2024")}
-                            className="drop-item"
-                          >
-                            July, 2024
-                          </div>
                         </div>
                       )}
                     </>
@@ -273,7 +277,10 @@ const LineChartData = () => {
                 : "line-chart-bar-condition"
             }`}
           >
-            <Chart show={isValue || dateValue} />
+            <Chart
+              show={isValue || dateValue}
+              showTime={compareCountryActive === "compareTime"}
+            />
           </div>
         </div>
       </div>
