@@ -28,10 +28,20 @@ const MapChartComponent = () => {
           </h1>
           <div className="side-logos">
             <button onClick={() => setShow("map")}>
-              <img alt="WorldMap" className="WorldMap" src={WorldMap}></img>
+              <img
+                alt="WorldMap"
+                className={`${show === "map" ? "worldMapColored" : "WorldMap"}`}
+                src={WorldMap}
+              ></img>
             </button>
-            <button onClick={() => setShow("table")}>
-              <img alt="Table" className="table" src={Table}></img>
+            <button onClick={() => setShow("tableData")}>
+              <img
+                alt="Table"
+                className={`${
+                  show === "tableData" ? "table-colored" : "table"
+                }`}
+                src={Table}
+              ></img>
             </button>
             <button>
               <img alt="BigArrow" className="bigArrow" src={shareIcon}></img>
@@ -65,7 +75,7 @@ const MapChartComponent = () => {
           </div>
         )}
 
-        {show === "table" && <TableData />}
+        {show === "tableData" && <TableData />}
       </div>
     </div>
   );

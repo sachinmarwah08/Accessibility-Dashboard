@@ -124,6 +124,20 @@
       }
     }
 
+    .table-colored {
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+      background: linear-gradient(
+        63.43deg,
+        rgba(153, 0, 153, 0.12) 16.67%,
+        rgba(0, 51, 204, 0.12) 100%
+      );
+    }
+
     .bigArrow {
       width: 24px;
       height: 24px;
