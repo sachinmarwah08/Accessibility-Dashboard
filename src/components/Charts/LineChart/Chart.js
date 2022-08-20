@@ -6,10 +6,10 @@ import {
   YAxis,
   // CartesianGrid,
   Tooltip,
-  Legend,
+  // Legend,
   ResponsiveContainer,
-  PolarGrid,
-  CartesianGrid,
+  // PolarGrid,
+  // CartesianGrid,
   // AreaChart,
   // Area,
   // BarChart,
@@ -58,7 +58,6 @@ const Chart = ({ show, showCountryTimeData }) => {
               fontSize: "15px",
               borderColor: "#757575",
               lineHeight: "1.25rem",
-              lineHeight: "1.75rem",
               borderRadius: "0.5rem",
             }}
             wrapperStyle={{

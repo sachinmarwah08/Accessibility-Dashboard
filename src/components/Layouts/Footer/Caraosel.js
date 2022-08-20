@@ -34,7 +34,7 @@ const Caraosel = () => {
     <div className="caraosel-container">
       <div className="content-outer">
         {data.map((item) => (
-          <img src={item.image} className="content"></img>
+          <img alt="adds" src={item.image} className="content"></img>
         ))}
       </div>
       <div className="dot-container">

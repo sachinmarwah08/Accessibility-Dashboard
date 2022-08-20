@@ -1,98 +1,98 @@
 export const data = [
   {
     id: 1,
-    hashtags: "#wellbeing",
-  },
-  {
-    id: 2,
-    hashtags: "#health",
-  },
-  {
-    id: 3,
-    hashtags: "#spiritual",
-  },
-  {
-    id: 4,
-    hashtags: "#yoga",
-  },
-  {
-    id: 5,
-    hashtags: "#meditation",
-  },
-  {
-    id: 6,
-    hashtags: "#selflove",
-  },
-  {
-    id: 7,
-    hashtags: "#peace",
-  },
-  {
-    id: 8,
-    hashtags: "#freedom",
-  },
-  {
-    id: 9,
-    hashtags: "#me",
-  },
-  {
-    id: 10,
-    hashtags: "#spirituality",
-  },
-  {
-    id: 11,
-    hashtags: "#love",
-  },
-  {
-    id: 12,
-    hashtags: "#wellness",
-  },
-  {
-    id: 13,
-    hashtags: "#mindfulness",
-  },
-  {
-    id: 14,
-    hashtags: "#nature",
-  },
-  {
-    id: 15,
-    hashtags: "#reading",
-  },
-  {
-    id: 16,
-    hashtags: "#smile",
-  },
-  {
-    id: 17,
-    hashtags: "#together",
-  },
-  {
-    id: 18,
-    hashtags: "#us",
-  },
-  {
-    id: 19,
-    hashtags: "#family",
-  },
-  {
-    id: 20,
     hashtags: "#strength",
   },
   {
-    id: 21,
-    hashtags: "#exercise",
-  },
-  {
-    id: 22,
-    hashtags: "#exercise",
-  },
-  {
-    id: 23,
+    id: 2,
     hashtags: "#allaboutus",
   },
   {
-    id: 24,
+    id: 3,
+    hashtags: "seattleseahawks",
+  },
+  {
+    id: 4,
+    hashtags: "#bnb",
+  },
+  {
+    id: 5,
+    hashtags: "#SDGS",
+  },
+  {
+    id: 6,
+    hashtags: "#love",
+  },
+  {
+    id: 7,
+    hashtags: "#immunotherapy",
+  },
+  {
+    id: 8,
+    hashtags: "#bmtsm",
+  },
+  {
+    id: 9,
+    hashtags: "#nature",
+  },
+  {
+    id: 10,
+    hashtags: "#Accessiblity",
+  },
+  {
+    id: 11,
+    hashtags: "#cart",
+  },
+  {
+    id: 12,
+    hashtags: "#us",
+  },
+  {
+    id: 13,
+    hashtags: "#genetherapy",
+  },
+  {
+    id: 14,
+    hashtags: "#ash21",
+  },
+  {
+    id: 15,
+    hashtags: "#Tech4Good",
+  },
+  {
+    id: 16,
+    hashtags: "#family",
+  },
+  {
+    id: 17,
+    hashtags: "#wellness",
+  },
+  {
+    id: 18,
+    hashtags: "#smile",
+  },
+  {
+    id: 19,
     hashtags: "#inspiration",
+  },
+  {
+    id: 20,
+    hashtags: "#mindfulness",
+  },
+  {
+    id: 21,
+    hashtags: "#together",
+  },
+  {
+    id: 22,
+    hashtags: "#SDGS",
+  },
+  {
+    id: 23,
+    hashtags: "#spiritual",
+  },
+  {
+    id: 24,
+    hashtags: "#spiritual",
   },
 ];

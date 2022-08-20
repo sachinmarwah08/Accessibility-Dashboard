@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-container">
         <div className="footer-logo">
-          <img className="logo" src={logo} />
+          <img alt="footer-logo" className="logo" src={logo} />
         </div>
         <div className="content-footer">
           <div className="left-footer-content">
@@ -54,10 +54,10 @@ const Footer = () => {
           <span className="copyright-colored">techabc</span>
         </div>
         <div className="social-icon">
-          <img className="icon" src={linkDin} />
-          <img className="icon" src={facebook} />
-          <img className="icon" src={twitter} />
-          <img className="icon" src={youtube} />
+          <img alt="linkedin" className="icon" src={linkDin} />
+          <img alt="facebook" className="icon" src={facebook} />
+          <img alt="twitter" className="icon" src={twitter} />
+          <img alt="youtube" className="icon" src={youtube} />
         </div>
       </div>
     </div>

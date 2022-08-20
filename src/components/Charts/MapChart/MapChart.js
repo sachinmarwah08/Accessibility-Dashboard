@@ -3,7 +3,7 @@ import "./MapChart.scss";
 import WorldMap from "../../../Images/newEarth.svg";
 import Table from "../../../Images/table.svg";
 import shareIcon from "../../../Images/share-2.svg";
-import GoogleMap from "./GoogleMap";
+import GoogleMap from "./googleMap";
 import TableData from "./Table";
 import Sort from "../../SortFilter/Sort";
 import RadioButton from "../../RadioButton/RadioButton";

@@ -123,14 +123,14 @@ const LineChartData = () => {
                 onClick={() => setCompareCountryActive("compareCountry")}
                 className="right-ouline-button"
               >
-                <img src={plusTwo} />
+                <img alt="plusIcon" src={plusTwo} />
                 Compare country
               </button>
               <button
                 onClick={() => setCompareCountryActive("compareTime")}
                 className="right-ouline-buttonTwo"
               >
-                <img src={plus} />
+                <img alt="plus" src={plus} />
                 Compare time
               </button>
             </div>
@@ -140,7 +140,7 @@ const LineChartData = () => {
           {compareCountryActive === "compareCountry" && (
             <div className="Add-country">
               <div className="country">
-                <img alt="image" src={threeDots} />
+                <img alt="dots" src={threeDots} />
                 <p className="title">Worldwide</p>
               </div>
               {!addCountry ? (
@@ -189,7 +189,7 @@ const LineChartData = () => {
           {compareCountryActive === "compareTime" && (
             <div className="Add-country">
               <div className="country">
-                <img alt="image" src={threeDots} />
+                <img alt="threeDots" src={threeDots} />
                 <p className="title">June, 2022</p>
               </div>
 
