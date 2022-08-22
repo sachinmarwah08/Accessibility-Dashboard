@@ -284,7 +284,11 @@ const LineChartData = () => {
           </div>
         </div>
       </div>
-      <div>{openModal && <Modal closeModal={setOpenModal} />}</div>
+      <div>
+        {openModal && (
+          <Modal linechartModal={openModal} closeModal={setOpenModal} />
+        )}
+      </div>
     </>
   );
 };

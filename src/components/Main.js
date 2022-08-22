@@ -7,12 +7,14 @@ import Header from "./Layouts/Header/Header";
 import NewsAndHashTags from "./NewsAndHashTags/NewsAndHashTags";
 import TrendingHashtags from "./TrendingHashtags/TrendingHashtags";
 import TopBottomButton from "./TopBottomButton/TopBottomButton";
+import DashboardFilter from "./DashboardFilter/DashboardFilter";
 
 const Main = () => {
   return (
     <>
       <Header />
       <GlobalWellbeing />
+      <DashboardFilter />
       <Contries />
       <NewsAndHashTags />
       <TrendingHashtags />
