@@ -69,7 +69,7 @@ const Modal = ({ closeModal, dashboardFilter, linechartModal }) => {
                     staticRanges={[
                       ...defaultStaticRanges,
                       {
-                        label: "This Year",
+                        label: "Year Till Date (YTD)",
                         range: () => ({
                           startDate: startOfYear(new Date()),
                           endDate: endOfDay(new Date()),
@@ -84,22 +84,22 @@ const Modal = ({ closeModal, dashboardFilter, linechartModal }) => {
                           );
                         },
                       },
-                      {
-                        label: "Last Year",
-                        range: () => ({
-                          startDate: startOfYear(addYears(new Date(), -1)),
-                          endDate: endOfYear(addYears(new Date(), -1)),
-                        }),
-                        isSelected(range) {
-                          const definedRange = this.range();
-                          return (
-                            isSameDay(
-                              range.startDate,
-                              definedRange.startDate
-                            ) && isSameDay(range.endDate, definedRange.endDate)
-                          );
-                        },
-                      },
+                      // {
+                      //   label: "Last Year",
+                      //   range: () => ({
+                      //     startDate: startOfYear(addYears(new Date(), -1)),
+                      //     endDate: endOfYear(addYears(new Date(), -1)),
+                      //   }),
+                      //   isSelected(range) {
+                      //     const definedRange = this.range();
+                      //     return (
+                      //       isSameDay(
+                      //         range.startDate,
+                      //         definedRange.startDate
+                      //       ) && isSameDay(range.endDate, definedRange.endDate)
+                      //     );
+                      //   },
+                      // },
                     ]}
                     rangeColors={["#14144b", "#14144b", "#14144b"]}
                     ranges={[selectionRange]}

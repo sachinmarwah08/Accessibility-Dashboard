@@ -91,6 +91,7 @@ const data = {
   },
   tooltip: {
     valueSuffix: "M",
+    pointFormat: "{series.name}: {point.y}<br/>Happy: 70%<br/>Sad: 30%",
     stickOnContact: false,
     backgroundColor: "rgba(255, 255, 255, 0.93)",
   },

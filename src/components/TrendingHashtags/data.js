@@ -1,11 +1,11 @@
 export const data = [
   {
     id: 1,
-    hashtags: "#strength",
+    hashtags: "strength",
   },
   {
     id: 2,
-    hashtags: "#allaboutus",
+    hashtags: "allaboutus",
   },
   {
     id: 3,
@@ -13,86 +13,86 @@ export const data = [
   },
   {
     id: 4,
-    hashtags: "#bnb",
+    hashtags: "bnb",
   },
   {
     id: 5,
-    hashtags: "#SDGS",
+    hashtags: "SDGS",
   },
   {
     id: 6,
-    hashtags: "#love",
+    hashtags: "love",
   },
   {
     id: 7,
-    hashtags: "#immunotherapy",
+    hashtags: "immunotherapy",
   },
   {
     id: 8,
-    hashtags: "#bmtsm",
+    hashtags: "bmtsm",
   },
   {
     id: 9,
-    hashtags: "#nature",
+    hashtags: "nature",
   },
   {
     id: 10,
-    hashtags: "#Accessiblity",
+    hashtags: "Accessiblity",
   },
   {
     id: 11,
-    hashtags: "#cart",
+    hashtags: "cart",
   },
   {
     id: 12,
-    hashtags: "#us",
+    hashtags: "us",
   },
   {
     id: 13,
-    hashtags: "#genetherapy",
+    hashtags: "genetherapy",
   },
   {
     id: 14,
-    hashtags: "#ash21",
+    hashtags: "ash21",
   },
   {
     id: 15,
-    hashtags: "#Tech4Good",
+    hashtags: "Tech4Good",
   },
   {
     id: 16,
-    hashtags: "#family",
+    hashtags: "family",
   },
   {
     id: 17,
-    hashtags: "#wellness",
+    hashtags: "wellness",
   },
   {
     id: 18,
-    hashtags: "#smile",
+    hashtags: "smile",
   },
   {
     id: 19,
-    hashtags: "#inspiration",
+    hashtags: "inspiration",
   },
   {
     id: 20,
-    hashtags: "#mindfulness",
+    hashtags: "mindfulness",
   },
   {
     id: 21,
-    hashtags: "#together",
+    hashtags: "together",
   },
   {
     id: 22,
-    hashtags: "#SDGS",
+    hashtags: "SDGS",
   },
   {
     id: 23,
-    hashtags: "#spiritual",
+    hashtags: "spiritual",
   },
   {
     id: 24,
-    hashtags: "#spiritual",
+    hashtags: "spiritual",
   },
 ];

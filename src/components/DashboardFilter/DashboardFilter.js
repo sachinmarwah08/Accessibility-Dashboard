@@ -27,7 +27,7 @@ const DashboardFilter = () => {
         onClick={() => setIsActive(!isActive)}
         className="filters-option-icon"
       >
-        <h1 className="heading">Filters</h1>
+        <h1 className="heading">Data Analytics</h1>
       </div>
       <div
         ref={headerRef}
