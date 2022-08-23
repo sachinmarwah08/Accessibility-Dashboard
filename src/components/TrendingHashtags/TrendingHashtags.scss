@@ -46,10 +46,12 @@
         list-style: none;
         padding-left: 0;
         display: flex;
+        margin: 0%;
+        padding-bottom: 1rem;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        line-height: 2.75rem;
+        line-height: 4rem;
         width: 100%;
         height: auto;
       }
@@ -60,7 +62,7 @@
         --size: attr(data-weight number); 
         */
         // --size: 4;
-        height: 8vh;
+        height: auto;
         // --color: linear-gradient(63.43deg, #990099 16.67%, #0033cc 100%);
         background: linear-gradient(45deg, #990099 50%, #330099 50%);
         -webkit-background-clip: text;
