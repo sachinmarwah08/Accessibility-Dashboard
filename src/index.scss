@@ -54,3 +54,35 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #bdbdbd;
 }
+.rdrInputRanges {
+  display: none;
+}
+
+.rdrStaticRangeLabel {
+  color: #14144b;
+  font-family: "Work-Sans";
+
+  @font-face {
+    font-family: "Work-Sans";
+    src: url("./Fonts/Sora-Regular.ttf");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Work-Sans";
+    src: url("./Fonts/Sora-Medium.ttf");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Sora";
+    src: url("./Fonts/Sora-SemiBold.ttf");
+    font-style: normal;
+  }
+}
+
+.rdrDayToday {
+  .rdrDayNumber {
+    span:after {
+      background: #14144b !important;
+    }
+  }
+}

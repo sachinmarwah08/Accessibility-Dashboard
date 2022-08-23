@@ -2,6 +2,7 @@
   width: 100%;
   margin-top: 6rem;
   height: 100%;
+  z-index: -10000000;
   background: linear-gradient(
     77.99deg,
     #1a2235 16.09%,
@@ -13,15 +14,16 @@
   .footer-container {
     padding-top: 3rem;
     padding-left: 8rem;
+    padding-bottom: 2.5rem;
     width: auto;
-    height: 42vh;
+    height: auto;
 
     .content-footer {
       display: flex;
       margin-top: 2rem;
       width: 100%;
       gap: 10rem;
-      height: 40vh;
+      height: auto;
 
       .left-footer-content {
         width: 46%;
@@ -107,6 +109,7 @@
             line-height: 21px;
 
             .info {
+              cursor: pointer;
               color: #a6a6a6;
               margin-left: 0.3rem;
             }
@@ -138,7 +141,7 @@
   }
   .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.13);
-    width: 80%;
+    width: 85%;
     height: auto;
     padding-bottom: 1.5rem;
     margin-top: 6rem;
@@ -153,6 +156,7 @@
       color: #949ab9;
     }
     .copyright-colored {
+      cursor: pointer;
       font-size: 12px;
       font-weight: 300;
       color: white;
@@ -164,7 +168,9 @@
       margin-top: 1rem;
       display: flex;
       gap: 10px;
+
       .icon {
+        cursor: pointer;
         width: 32px;
         height: 32px;
       }

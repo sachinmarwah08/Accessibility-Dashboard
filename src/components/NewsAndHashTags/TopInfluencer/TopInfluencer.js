@@ -70,7 +70,7 @@ const TopInfluencer = () => {
         {trendingHashtags.map((item) => (
           <div key={item.id} className="right-content">
             <div key={item.id} className="left-content">
-              <p>{item.id}</p>
+              <p className="id">{item.id}</p>
               <p className="username">{item.hashtags}</p>
             </div>
           </div>

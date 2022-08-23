@@ -1,4 +1,19 @@
 import React, { useState } from "react";
+import {
+  addDays,
+  endOfDay,
+  startOfDay,
+  startOfYear,
+  startOfMonth,
+  endOfMonth,
+  endOfYear,
+  addMonths,
+  addYears,
+  startOfWeek,
+  endOfWeek,
+  isSameDay,
+  differenceInCalendarDays,
+} from "date-fns";
 import "./Modal.scss";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,7 +21,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { DateRangePicker } from "react-date-range";
+import { DateRangePicker, defaultStaticRanges } from "react-date-range";
 import Select from "react-select";
 
 const Modal = ({ closeModal, dashboardFilter, linechartModal }) => {
@@ -51,7 +66,42 @@ const Modal = ({ closeModal, dashboardFilter, linechartModal }) => {
               <div className="filter-modal-content">
                 <div>
                   <DateRangePicker
-                    rangeColors={["#990099", "#990099", "#990099"]}
+                    staticRanges={[
+                      ...defaultStaticRanges,
+                      {
+                        label: "This Year",
+                        range: () => ({
+                          startDate: startOfYear(new Date()),
+                          endDate: endOfDay(new Date()),
+                        }),
+                        isSelected(range) {
+                          const definedRange = this.range();
+                          return (
+                            isSameDay(
+                              range.startDate,
+                              definedRange.startDate
+                            ) && isSameDay(range.endDate, definedRange.endDate)
+                          );
+                        },
+                      },
+                      {
+                        label: "Last Year",
+                        range: () => ({
+                          startDate: startOfYear(addYears(new Date(), -1)),
+                          endDate: endOfYear(addYears(new Date(), -1)),
+                        }),
+                        isSelected(range) {
+                          const definedRange = this.range();
+                          return (
+                            isSameDay(
+                              range.startDate,
+                              definedRange.startDate
+                            ) && isSameDay(range.endDate, definedRange.endDate)
+                          );
+                        },
+                      },
+                    ]}
+                    rangeColors={["#14144b", "#14144b", "#14144b"]}
                     ranges={[selectionRange]}
                     onChange={handleSelect}
                   />

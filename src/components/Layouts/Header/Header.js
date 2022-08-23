@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import logo from "../../../Images/logo.svg";
+import headerSearch from "../../../Images/header-search.svg";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
@@ -23,6 +24,12 @@ const Header = () => {
         </div>
         <div className="links">
           <div className="links-data">
+            <img
+              // onClick={navigateHome}
+              alt="logo"
+              className="header-search"
+              src={headerSearch}
+            ></img>
             <a href="" className="icon-button">
               About
             </a>
