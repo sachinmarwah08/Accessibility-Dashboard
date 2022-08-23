@@ -12,7 +12,7 @@ const DashboardFilter = () => {
       if (headerRef.current) {
         const documentTop =
           document.body.scrollTop || document.documentElement.scrollTop;
-        if (documentTop > 0)
+        if (documentTop > 280)
           headerRef.current.classList.add("hide-filter-icon");
         else headerRef.current.classList.remove("hide-filter-icon");
       }
