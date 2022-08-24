@@ -23,13 +23,13 @@ const DashboardFilter = () => {
       {isActive && (
         <Modal dashboardFilter={isActive} closeModal={setIsActive} />
       )}
-      <div
+      <button
         onClick={() => setIsActive(!isActive)}
         className="filters-option-icon"
       >
         <h1 className="heading">Data Analytics</h1>
-      </div>
-      <div
+      </button>
+      <button
         ref={headerRef}
         onClick={() => setIsActive(!isActive)}
         className="left-side-filter-option"
@@ -39,7 +39,7 @@ const DashboardFilter = () => {
           src={filterBarLogo}
           className="filter-logo-option"
         ></img>
-      </div>
+      </button>
     </>
   );
 };

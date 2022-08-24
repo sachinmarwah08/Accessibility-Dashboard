@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import {
-  addDays,
+  // addDays,
   endOfDay,
-  startOfDay,
+  // startOfDay,
   startOfYear,
-  startOfMonth,
-  endOfMonth,
-  endOfYear,
-  addMonths,
-  addYears,
-  startOfWeek,
-  endOfWeek,
+  // startOfMonth,
+  // endOfMonth,
+  // endOfYear,
+  // addMonths,
+  // addYears,
+  // startOfWeek,
+  // endOfWeek,
   isSameDay,
-  differenceInCalendarDays,
+  // differenceInCalendarDays,
 } from "date-fns";
 import "./Modal.scss";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -150,17 +150,6 @@ const Modal = ({ closeModal, dashboardFilter, linechartModal }) => {
                         classNamePrefix="select"
                       />
                     </div>
-                    {/* <div className="">
-                    Hello
-                    <Select
-                      // defaultValue={[colourOptions[2], colourOptions[3]]}
-                      isMulti
-                      name="colors"
-                      // options={colourOptions}
-                      className="basic-multi-select"
-                      classNamePrefix="select"
-                    />
-                  </div> */}
                   </div>
                 </div>
               </div>
