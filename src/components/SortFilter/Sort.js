@@ -68,13 +68,6 @@ const Sort = ({
                     className="filter-item"
                   >
                     {option}
-                    {/* <RadioButton
-                      radioName="sort"
-                      name={option}
-                      value={option}
-                      checked={optionRadioValue}
-                      onchange={() => setOptionRadioValue(option)}
-                    /> */}
 
                     <div className="sort-circle">
                       {data === option && (
