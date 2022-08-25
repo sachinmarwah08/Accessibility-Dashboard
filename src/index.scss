@@ -54,6 +54,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #bdbdbd;
 }
+
 .rdrInputRanges {
   display: none;
 }
@@ -84,5 +85,37 @@ body {
     span:after {
       background: #14144b !important;
     }
+  }
+}
+.highcharts-tooltip {
+  border: 1px solid rgba(100, 143, 255, 0.5);
+  background: #fff;
+  display: block;
+  border-radius: 4px;
+  line-height: 1.5rem;
+  height: 6.5rem;
+  position: absolute;
+  color: #14144b !important;
+  left: 473px;
+  padding: 5px !important;
+  width: 7rem !important;
+  white-space: normal !important;
+  font-family: "Work-Sans" !important;
+  // font-weight: 600 !important;
+
+  @font-face {
+    font-family: "Work-Sans";
+    src: url("./Fonts/Sora-Regular.ttf");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Work-Sans";
+    src: url("./Fonts/Sora-Medium.ttf");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Sora";
+    src: url("./Fonts/Sora-SemiBold.ttf");
+    font-style: normal;
   }
 }

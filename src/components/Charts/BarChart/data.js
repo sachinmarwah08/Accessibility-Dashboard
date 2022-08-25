@@ -91,9 +91,17 @@ const data = {
   },
   tooltip: {
     valueSuffix: "M",
-    pointFormat: "{series.name}: {point.y}<br/>Happy: 70%<br/>Sad: 30%",
+    useHTML: true,
+    backgroundColor: null,
+    borderWidth: 0,
+    shadow: false,
+    pointFormat:
+      "{series.name}: <strong>{point.y}</strong><br/>Happy: <strong>70%</strong><br/>Sad: <strong>30%</strong>",
     stickOnContact: false,
-    backgroundColor: "rgba(255, 255, 255, 0.93)",
+    style: {
+      zIndex: 200000000,
+    },
+    // backgroundColor: "rgba(255, 255, 255, 0.93)",
   },
   legend: {
     enabled: false,
