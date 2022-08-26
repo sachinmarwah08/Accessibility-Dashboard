@@ -59,6 +59,7 @@ const BarChartComponent = () => {
               onchange={handleRadioChange}
             />
           </div>
+
           <div className="filter-container">
             <TopBottomButton
               setTopBottom={setTopBottom}
@@ -68,6 +69,7 @@ const BarChartComponent = () => {
             <Sort setData={setBardata} data={bardata} optiondata={barData} />
           </div>
         </div>
+
         <div className="bar-chart-wrapper">
           <div className="chart-bar">
             <HighchartsReact highcharts={Highcharts} options={data} />
