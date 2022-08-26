@@ -66,7 +66,11 @@ const BarChartComponent = () => {
               topBottomData={topBottomData}
               topBottom={topBottom}
             />
-            <Sort setData={setBardata} data={bardata} optiondata={barData} />
+            <Sort
+              setData={setBardata}
+              data={bardata}
+              dropdownOptions={barData}
+            />
           </div>
         </div>
 

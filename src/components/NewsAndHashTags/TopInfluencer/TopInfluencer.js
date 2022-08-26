@@ -1,32 +1,50 @@
 import React, { useState } from "react";
-// import dropdown from "../../Images/DropdownWhite.svg";
 import Sort from "../../SortFilter/Sort";
-import { trendingHashtags } from "./data";
-import "./TrendingHashtags.scss";
-import shareIcon from "../../../Images/sharetwo.svg";
+import { data } from "./data";
+import "./TopInfluencer.scss";
+import shareIcon from "../../../Images/share-2.svg";
 import RadioButton from "../../RadioButton/RadioButton";
-import TopBottomButton from "../../TopBottomButton/TopBottomButton";
+import Content from "./Content";
 
 const TopInfluencer = () => {
-  const trendingData = ["Country", "Influencer", "Hashtag"];
-  const [trendData, setTrendData] = useState("Filter");
+  const dropdownOptions = ["Country", "Influencer", "Hashtag"];
+  const [topInfluencerFilter, setTopInfluencerFilter] = useState("Filter");
   const [isRadioChecked, setIsRadioChecked] = useState(1);
+  const [topInfluencerData, setTopInfluencerData] = useState(data);
+  const [wordEntered, setWordEntered] = useState("");
 
   const handleRadioChange = (value) => {
     setIsRadioChecked(value);
+    console.log(value);
   };
+
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.hashtags.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    setTopInfluencerData(newFilter);
+  };
+
+  const clearData = () => {
+    setTopInfluencerData(data);
+    setWordEntered("");
+  };
+
   return (
     <div className="right-container">
       <div className="heading-content">
-        <div className="right-heading">Influencer Analysis</div>
+        <div className="right-heading">Top Influencers</div>
         <div className="icons">
           <p className="score">
-            13569 <span className="digits">Influencers</span>
+            <span className="digits">13569</span> Influencers
           </p>
-
           <img alt="share-icon" className="share-img" src={shareIcon} />
         </div>
       </div>
+
       <div className="trending-radioBtn">
         <RadioButton
           radioName="topInfluencer"
@@ -56,26 +74,21 @@ const TopInfluencer = () => {
           value={4}
           onchange={handleRadioChange}
         />
-        {/* <TopBottomButton /> */}
       </div>
 
       <div className="trending-sort">
         <Sort
-          setData={setTrendData}
-          data={trendData}
-          optiondata={trendingData}
+          filterData={topInfluencerData.length === 0}
+          clearData={clearData}
+          value={wordEntered}
+          onchange={handleFilter}
+          setData={setTopInfluencerFilter}
+          data={topInfluencerFilter}
+          dropdownOptions={dropdownOptions}
         />
       </div>
-      <div className="right-content-wrapper">
-        {trendingHashtags.map((item) => (
-          <div key={item.id} className="right-content">
-            <div key={item.id} className="left-content">
-              <p className="id">{item.id}</p>
-              <p className="username">{item.hashtags}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+
+      <Content topInfluencerData={topInfluencerData} />
     </div>
   );
 };
