@@ -228,12 +228,12 @@ const LineChartData = () => {
                       <p className="title">Choose Time</p>
                       {chooseTime && (
                         <div className="dropdown-content">
-                          <div
+                          <button
                             onClick={() => setDateValue("July, 2022")}
                             className="drop-item"
                           >
                             July, 2022
-                          </div>
+                          </button>
                         </div>
                       )}
                     </>
