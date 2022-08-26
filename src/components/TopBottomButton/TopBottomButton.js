@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import sortDown from "../../Images/bi_sort-down.svg";
 import "./TopBottomButton.scss";
 
-const TopBottomButton = () => {
+const TopBottomButton = ({ topBottom, topBottomData, setTopBottom }) => {
   const [isActive, setIsActive] = useState(false);
-  const topBottomData = ["Top 10", "Bottom 10"];
-  const [topBottom, setTopBottom] = useState("Top 10");
 
   return (
     <div className="btn-wrapper">

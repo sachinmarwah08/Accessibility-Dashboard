@@ -12,6 +12,8 @@ const BarChartComponent = () => {
   const barData = ["Influencer", "Hashtag"];
   const [bardata, setBardata] = useState("Filter");
   const [isRadioChecked, setIsRadioChecked] = useState(1);
+  const topBottomData = ["Top 10", "Bottom 10"];
+  const [topBottom, setTopBottom] = useState("Top 10");
 
   const handleRadioChange = (value) => {
     setIsRadioChecked(value);
@@ -58,7 +60,11 @@ const BarChartComponent = () => {
             />
           </div>
           <div className="filter-container">
-            <TopBottomButton />
+            <TopBottomButton
+              setTopBottom={setTopBottom}
+              topBottomData={topBottomData}
+              topBottom={topBottom}
+            />
             <Sort setData={setBardata} data={bardata} optiondata={barData} />
           </div>
         </div>

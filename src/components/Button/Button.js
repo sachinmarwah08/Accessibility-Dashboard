@@ -27,7 +27,7 @@ const Button = ({ selected, setSelected, options, disabled }) => {
       {isActive && (
         <div className="dropdown-content">
           {options.map((option) => (
-            <div
+            <button
               onClick={(e) => {
                 setSelected(option);
                 setActive(false);
@@ -35,7 +35,7 @@ const Button = ({ selected, setSelected, options, disabled }) => {
               className="dropdown-item"
             >
               {option}
-            </div>
+            </button>
           ))}
         </div>
       )}
