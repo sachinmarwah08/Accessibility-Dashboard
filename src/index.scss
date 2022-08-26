@@ -47,12 +47,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #bdbdbd;
-  border-radius: 188rem;
+  background: rgba(20, 20, 75, 0.3);
+  border-radius: 1.88rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #bdbdbd;
+  background: rgba(20, 20, 75, 0.3);
 }
 
 .rdrInputRanges {
