@@ -53,16 +53,21 @@ const Modal = ({ closeModal, dashboardFilter, linechartModal }) => {
 
   return (
     <div className="modal-background">
-      <div className="modal-container">
+      <div tabIndex="1" className="modal-container">
         <div
+          tabIndex="1"
           className={`${dashboardFilter ? "filterModa-body" : "modal-body"}`}
         >
-          <button className="modal-cloe-btn" onClick={() => closeModal(false)}>
+          <button
+            tabIndex="0"
+            className="modal-cloe-btn"
+            onClick={() => closeModal(false)}
+          >
             <FontAwesomeIcon className="x-mark" icon={faXmark} />
           </button>
 
           {dashboardFilter && (
-            <div className="filter-modal-container">
+            <div tabIndex="1" className="filter-modal-container">
               <div className="filter-modal-content">
                 <div>
                   <DateRangePicker
