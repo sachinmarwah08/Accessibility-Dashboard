@@ -14,7 +14,7 @@ const containerStyle = {
 
 function MyComponent() {
   const { isLoaded } = useJsApiLoader({
-    // id: "google-map-script",
+    id: "google-map-script",
     googleMapsApiKey: "AIzaSyC_3Wo9FRrSnT4idegucxu2wIjVgPJH84I",
   });
 
